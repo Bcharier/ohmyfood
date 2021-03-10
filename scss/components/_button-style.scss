@@ -1,0 +1,32 @@
+// Bouton 
+.button-style {
+  display: flex;
+  color: white;
+  font-family: "Roboto-bold";
+  font-size: 0.9rem;
+  background-color: $colour-primary;
+  // background-image: -moz-linear-gradient(
+  //   177deg,
+  //   $colour-secondary 0%,
+  //   $colour-primary 61%
+  // );
+  // background-image: -webkit-linear-gradient(
+  //   177deg,
+  //   $colour-secondary 0%,
+  //   $colour-primary 61%
+  // );
+  background-image: linear-gradient(-5deg,$colour-primary-buttons,$colour-secondary-buttons);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff79da",endColorstr="#9356dc",GradientType=1);
+  border-radius: 30px;
+  height: 40px;
+  width: 200px;
+  border: none;
+  margin: 1rem auto 5rem auto;
+  align-items: center;
+  justify-content: center;
+  @include button-box-shadow;
+  &:hover {
+    @include button-box-shadow-hover;
+    background-color: white;
+  }
+}

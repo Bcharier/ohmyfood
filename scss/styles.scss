@@ -1,0 +1,453 @@
+@import "./utils/variables";
+@import "./base/fonts";
+@import "./utils/mixins";
+@import "./components/animations";
+
+// Loading spinner
+#loading-spinner {
+  display: inline-block;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+  animation: loading-spinner-background 100ms;
+  animation-delay: 2000ms;
+  animation-fill-mode: forwards;
+
+  &-container {
+    display: flex;
+    width: 4rem;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    .loading-circle {
+      color: $colour-primary;
+      font-size: 2.5rem;
+      animation: loading-animation 2500ms;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+// Homepage
+body {
+  width: 100%;
+  font-family: "Roboto";
+  margin-right: auto;
+  margin-left: auto;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+// Header
+
+#logo-homepage {
+  font-family: "Shrikhand";
+  text-align: center;
+  margin: 10px 0;
+  font-size: 2.2rem;
+}
+
+// Barre de localisation
+
+#user-localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colour-darker-grey;
+  margin: 0;
+  i {
+    padding-right: 1rem;
+    font-size: 0.8rem;
+  }
+
+  #input-user-localisation {
+    font-family: "Roboto-Bold";
+    font-size: 1rem;
+    border: none;
+    height: 3rem;
+    width: 8rem;
+    background-color: $colour-darker-grey;
+  }
+
+  #input-user-localisation::placeholder {
+    color: black;
+    opacity: 1;
+    font-family: "Roboto-bold";
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+// Explorer nos restaurants
+#explore-restaurants {
+  text-align: center;
+  background-color: $colour-light-grey;
+  border: solid $colour-light-grey;
+  margin: 0 0 30px 0;
+  padding-top: 1rem;
+  h1 {
+    font-size: 1.5rem;
+    font-family: "Roboto-bold";
+    margin-right: auto;
+    margin-left: auto;
+  }
+  h3 {
+    font-size: 1.2rem;
+    color: $colour-light-black;
+  }
+}
+
+// Bouton explorer
+@import "./components/button-style";
+
+// Fonctionnement
+#app-function {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 0 40px 25px;
+
+  #functions-title {
+    width: 90%;
+    font-size: 18px;
+    font-family: "Roboto-bold";
+    margin: 0 0 20px 0;
+  }
+
+  .function-button {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    background-color: $colour-light-grey;
+    margin: 0 30px 0 0;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    height: 3rem;
+    @include box-shadow;
+    i {
+      margin: 0 20px 0 0;
+      color: $colour-function-icons;
+      font-size: 12px;
+      text-align: center;
+      width: 10px;
+    }
+  }
+
+  .function-number {
+    margin: 0 20px 0 0;
+    color: white;
+    background-color: $colour-primary;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 8px;
+    width: 8px;
+    height: 8px;
+    padding: 6px;
+    position: relative;
+    right: 8px;
+  }
+
+  #active-function-button {
+    background-color: $colour-light-purple;
+    i {
+      color: $colour-primary;
+    }
+  }
+}
+
+// Liste des restaurants
+#main-homepage {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: $colour-light-grey;
+  margin: 0 0 0 0;
+  padding-bottom: 50px;
+
+  #restaurants-title {
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: "Roboto-bold";
+    margin: 0px 0 15px 25px;
+    padding-top: 40px;
+  }
+  .restaurant {
+    display: flex;
+    flex-flow: wrap;
+    position: relative;
+    width: 47%;
+    margin: 15px 0;
+    background-color: white;
+    border-radius: 15px;
+    @include box-shadow;
+    img {
+      height: 12rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      width: 100%;
+    }
+  }
+  .new-restaurant {
+    background-color: $colour-tertiary;
+    color: $colour-darker-tertiary;
+
+    font-size: 1rem;
+    font-family: "Roboto-bold";
+    text-align: center;
+    position: absolute;
+    right: 1rem;
+    bottom: 13rem;
+    padding: 5px;
+  }
+  @import "./components/_heart-fill.scss";
+}
+
+// Texte des restaurants
+
+.text-restaurant {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  line-height: 10px;
+  .restaurant-name {
+    font-size: 1rem;
+    font-family: "Roboto-bold";
+    width: 100%;
+  }
+  .restaurant-location {
+    font-size: 0.9rem;
+  }
+}
+
+// Footer
+@import "./layouts/footer";
+
+// Page des restaurants
+// Header restaurant
+header {
+  margin: 0;
+  i {
+    font-size: 1.3rem;
+  }
+  .header-restaurant {
+    display: flex;
+    margin: 10px 25px 10px 25px;
+    justify-content: left;
+    align-items: center;
+  }
+  .logo-header-restaurant {
+    font-family: "Shrikhand";
+    font-size: 2.2rem;
+    text-align: center;
+    margin: auto;
+    padding-right: 2.2rem;
+  }
+}
+
+// Main restaurant
+main {
+  margin: 0;
+  background-color: rgb(243, 242, 242);
+  span {
+    display: flex;
+    width: 150px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .top-img-restaurant {
+    width: 100%;
+    height: 27rem;
+    object-fit: cover;
+    margin: 0;
+    z-index: 1;
+  }
+}
+
+// Nom du restaurant
+.section-title-restaurant {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  border: transparent;
+  border-radius: 30px 30px 0 0;
+  position: relative;
+  bottom: 30px;
+  background-color: rgb(243, 242, 242);
+  padding-top: 30px;
+  @import "./components/_heart-fill.scss";
+
+  .restaurant-title {
+    font-family: "Shrikhand";
+    font-size: 1.7rem;
+    margin: 0 0 0 25px;
+  }
+}
+
+// Menu du restaurant
+.dish-menu {
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+
+  .dish-category {
+    margin: 0 0 30px 0;
+    width: 32%;
+  }
+  .dish-category-title {
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: solid $colour-tertiary;
+    width: 2.2rem;
+  }
+  .dish {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px;
+    margin: 15px 0;
+    @include box-shadow;
+  }
+  .dish-text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .text-price {
+    width: 5%;
+    font-size: 13px;
+    font-family: "Roboto-bold";
+    padding-right: 3%;
+  }
+  .dish-name {
+    padding: 10px 0 0 10px;
+    margin: 0;
+    font-family: "Roboto-bold";
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  .dish-description {
+    font-size: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 10px;
+    width: 85%;
+  }
+  .icon-selection {
+    display: inline-block;
+    color: white;
+    background-color: $colour-tertiary;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 100px;
+    border: transparent;
+    transform: rotate(50deg);
+  }
+}
+
+// animation apparition du menu
+
+.dish-delay0 {
+  opacity: 0;
+  animation-name: dish-appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.dish-delay1 {
+  opacity: 0;
+  animation-name: dish-appear;
+  animation-duration: 1000ms;
+  animation-delay: 100ms;
+  animation-fill-mode: forwards;
+}
+
+.dish-delay2 {
+  opacity: 0;
+  animation-name: dish-appear;
+  animation-duration: 1000ms;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+}
+.dish-delay3 {
+  opacity: 0;
+  animation-name: dish-appear;
+  animation-duration: 1000ms;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+}
+.dish-delay4 {
+  opacity: 0;
+  animation-name: dish-appear;
+  animation-duration: 1000ms;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+}
+.dish-delay5 {
+  opacity: 0;
+  animation-name: dish-appear;
+  animation-duration: 1000ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+}
+
+.dish-delay6 {
+  opacity: 0;
+  animation-name: dish-appear;
+  animation-duration: 1000ms;
+  animation-delay: 600ms;
+  animation-fill-mode: forwards;
+}
+
+.dish-delay7 {
+  opacity: 0;
+  animation-name: dish-appear;
+  animation-duration: 1000ms;
+  animation-delay: 700ms;
+  animation-fill-mode: forwards;
+}
+
+.dish-delay8 {
+  opacity: 0;
+  animation-name: dish-appear;
+  animation-duration: 1000ms;
+  animation-delay: 800ms;
+  animation-fill-mode: forwards;
+}
+
+.dish-delay9 {
+  opacity: 0;
+  animation-name: dish-appear;
+  animation-duration: 1000ms;
+  animation-delay: 900ms;
+  animation-fill-mode: forwards;
+}
+
+// Media query mobiles
+@import "./layouts/mobile";
+
+// Media query tablettes
+@import "./layouts/tablet";
+
+// Media query écrans larges
+@import "./layouts/large-screen";

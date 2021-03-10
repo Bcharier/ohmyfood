@@ -1,0 +1,113 @@
+@media only screen and (max-width: 767px) {
+  // Header
+
+  #logo-homepage {
+    font-family: "Shrikhand";
+    text-align: center;
+    margin: 10px 0;
+    font-size: 2.2rem;
+  }
+  
+  // Explorer nos restaurants
+  #explore-restaurants {
+    h1 {
+      width: 250px;
+    }
+  }
+
+  // Fonctionnement
+  #app-function {
+    display: block;
+    width: 90%;
+    margin: 0 25px 40px 25px;
+
+    .function-button {
+      width: 95%;
+      margin: 0 0 1.5rem 0;
+    }
+  }
+
+  // Liste des restaurants
+
+  #main-homepage {
+    .restaurant {
+      width: 92%;
+      margin: 1rem;
+      img {
+        height: 10rem;
+      }
+    }
+    .new-restaurant {
+      position: absolute;
+      right: 0.7rem;
+      bottom: 11.5rem;
+      padding: 5px;
+      font-size: 0.8rem;
+    }
+  }
+
+  .text-restaurant {
+    display: flex;
+    justify-content: flex-start;
+
+    .container-restaurant-info {
+      width: 80%;
+      margin-left: 1rem;
+    }
+  }
+
+  // Page des restaurants
+
+  // photo du restaurant
+  main {
+    .top-img-restaurant {
+      width: 100%;
+      height: 15rem;
+      object-fit: cover;
+      margin: 0;
+      z-index: 5;
+    }
+  }
+
+  // Nom du restaurant
+  .section-title-restaurant {
+    .container-like-restaurant {
+      padding-right: 1rem;
+    }
+
+    .restaurant-title {
+      font-family: "Shrikhand";
+      font-size: 1.7rem;
+      margin: 0 0 0 0px;
+    }
+  }
+
+  // Menu du restaurant
+  .dish-menu {
+    padding: 0 25px;
+    display: block;
+    .dish-category {
+      margin: 0 0 1rem 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .dish-category-title {
+      font-size: 15px;
+      font-weight: 500;
+      border-bottom: solid $colour-tertiary;
+      width: 2.2rem;
+    }
+    .dish {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+    .dish-text > p {
+      line-height: 0.9rem;
+    }
+    a {
+      display: contents;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@media only screen and (min-width: 767px) and (max-width: 1000px) {
+    // Fonctionnement
+    #app-function {
+    .function-button {
+      width: 29%;
+      i {
+        margin: 0 15px 0 0;
+      }
+    }
+    .function-number {
+      margin: 0 5px 0 0;
+    }
+  }
+  
+    // Liste des restaurants
+    #main-homepage{
+    .restaurant {
+      width: 47%;
+      margin: 11px;
+    }
+  }
+}

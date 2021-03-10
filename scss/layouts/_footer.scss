@@ -1,0 +1,42 @@
+// Footer
+footer {
+  background-color: $colour-light-black;
+  padding: 15px 0 10px 0px;
+  color: white;
+  margin: 0;
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin: 0;
+    color: white;
+    line-height: 0.2rem;
+  }
+  .footer-logo {
+    font-family: "Shrikhand";
+    font-size: 1.3rem;
+    margin-left: 2rem;
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    i {
+      margin: 0 20px 0 0;
+      font-size: 11px;
+      width: 10px;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  .footer-link-bold {
+    font-family: "Roboto-bold";
+  }
+  
+  address {
+    font-style: normal;
+  }
+}
+
+

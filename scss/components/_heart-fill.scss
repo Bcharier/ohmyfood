@@ -1,0 +1,20 @@
+.container-like-restaurant {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .like-restaurant {
+      position: absolute;
+      font-size: 1.5rem;
+    }
+    .like-restaurant-full {
+      position: absolute;
+      font-size: 1.5rem;
+      color: $colour-primary;
+      opacity: 0;
+    }
+    .like-restaurant-full:hover {
+      transition-duration: 0.7s ;
+      opacity: 1;
+    }
+  }

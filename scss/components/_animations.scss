@@ -1,0 +1,61 @@
+
+// Animation loading spinner
+@keyframes loading-animation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes loading-spinner-background {
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
+// Animation apparition des plats 
+@keyframes dish-appear {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+// Animation sélection de plat
+.dish:hover .container-selection-animation {
+  background-color: #99e2d0;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-3rem);
+  transition-duration: 0.7s;
+  border-radius: 0 15px 15px 0;
+  height: 4.3rem;
+  
+
+  .icon-selection {
+      transform: rotate(360deg);
+      transition: transform 0.6s;
+      transition-delay: 0.1s;
+  }
+}
+
+.container-selection-animation {
+  position: absolute;
+  right: -3rem;
+}
+
+.dish:hover .dish-text {
+  transition: width;
+  transition-duration: 0.7s;
+  width: calc(100% - 5rem);
+}
